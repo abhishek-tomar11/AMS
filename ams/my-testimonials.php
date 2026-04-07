@@ -1,6 +1,6 @@
 
-<?php
-session_start();
+<?php 
+require_once __DIR__ . '/includes/session.php';
 error_reporting(0);
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)

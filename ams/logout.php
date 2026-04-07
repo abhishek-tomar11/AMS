@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+require_once __DIR__ . '/includes/session.php';
 $_SESSION = array();
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -12,4 +12,3 @@ unset($_SESSION['login']);
 session_destroy(); // destroy session
 header("location:index.php"); 
 ?>
-
